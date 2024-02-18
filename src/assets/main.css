@@ -1,0 +1,41 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap'); */
+*{
+  padding: 0;
+  margin: 0;
+}
+.riot {
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.updown {
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes example {
+  0%   {  top:0px;}
+  25%  {  top:40px;}    
+  45%  {  top:0px;}    
+  75%  {  top:40px;}    
+  100% {  top:0px;}
+}
+.card-background{
+  background: rgba(0, 0, 0, 0.281)
+}
+  
+@layer components {
+  .bg-primary {
+    @apply bg-gradient-to-r from-pink-500 via-emerald-500 to-amber-500;
+  }
+  .card{
+    @apply card-background h-full md:mx-16  mb-10 md:py-9 mx-1 rounded-3xl md:shadow-2xl  shadow-amber-700   ;   
+     
+
+  }
+}
